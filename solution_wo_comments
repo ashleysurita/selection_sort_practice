@@ -1,0 +1,19 @@
+function selectionSort(array) {	
+	let arr = [...array]
+  
+	for ( i = 0; i < arr.length - 1; i++ ) {
+		const currentValue = arr[i]
+		let minIndex = i
+    
+		for( j = i + 1; j < arr.length; j++ ) {
+			if ( arr[j] <= arr[minIndex] ) {
+				minIndex = j
+			}		
+		}
+    
+		arr[i] = arr[minIndex]
+		arr[minIndex] = currentValue
+	}
+  
+	return arr
+}
